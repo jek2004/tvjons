@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>影视仓源管理</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; padding: 20px; background: #f9f9f9; }
+    h2 { color: #e63946; }
+    textarea { width: 100%; height: 280px; font-family: monospace; margin: 10px 0; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    button { background: #4CAF50; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #45a049; }
+    .container { max-width: 900px; margin: 0 auto; }
+    a { color: #1d3557; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🎬 影视仓源管理后台</h2>
+    <form method="post" action="/save">
+      <h3>vod.json</h3>
+      <textarea name="vod_json">{{ vod_json }}</textarea>
+
+      <h3>live.json</h3>
+      <textarea name="live_json">{{ live_json }}</textarea>
+
+      <br><br>
+      <button type="submit">💾 保存并生效</button>
+    </form>
+    <p style="margin-top: 20px;">
+      <a href="/vod.json" target="_blank">👁️ 预览 vod.json</a> |
+      <a href="/live.json" target="_blank">👁️ 预览 live.json</a>
+    </p>
+  </div>
+</body>
+</html>
